@@ -1,0 +1,153 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* New light mode palette - soft teal/slate professional */
+:root {
+  --background: #FFFFFF;
+  --foreground: #515150;
+  --card: #FFFFFF;
+  --card-foreground: #515150;
+  --popover: #FFFFFF;
+  --popover-foreground: #515150;
+  --primary: #008894;
+  --primary-foreground: #FFFFFF;
+  --secondary: #F0FDFA;
+  --secondary-foreground: #008894;
+  --muted: #F3F4F6;
+  --muted-foreground: #374151;
+  --accent: #25D366;
+  --accent-foreground: #FFFFFF;
+  --destructive: #EF4444;
+  --destructive-foreground: #FFFFFF;
+  --border: #E5E7EB;
+  --input: #E5E7EB;
+  --ring: #008894;
+  --radius: 0.625rem;
+
+  /* Custom WAI colors - restored to WAI palette */
+  --wai-teal: #008894;
+  --wai-mint: #25D366;
+  --wai-slate: #515150;
+  --wai-success: #22C55E;
+  --wai-warning: #F59E0B;
+
+  --sidebar: #162630;
+  --sidebar-foreground: #FFFFFF;
+  --sidebar-primary: #24a684;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: rgba(255, 255, 255, 0.1);
+  --sidebar-accent-foreground: #FFFFFF;
+  --sidebar-border: #162630;
+  --sidebar-ring: #FFFFFF;
+}
+
+.dark {
+  --background: #17181e;
+  --foreground: #FAFAFA;
+  --card: #1e1f27;
+  --card-foreground: #FAFAFA;
+  --popover: #1e1f27;
+  --popover-foreground: #FAFAFA;
+  --primary: #008894;
+  --primary-foreground: #FFFFFF;
+  --secondary: #27272a;
+  --secondary-foreground: #FAFAFA;
+  --muted: #27272a;
+  --muted-foreground: #6b7280;
+  --accent: #25D366;
+  --accent-foreground: #FFFFFF;
+  --destructive: #7f1d1d;
+  --destructive-foreground: #FAFAFA;
+  --border: #27272a;
+  --input: #27272a;
+  --ring: #008894;
+
+  /* Custom WAI colors - dark mode */
+  --wai-teal: #008894;
+  --wai-mint: #25D366;
+  --wai-slate: #FAFAFA;
+  --wai-success: #22C55E;
+  --wai-warning: #F59E0B;
+
+  --sidebar: #1e1f27;
+  --sidebar-foreground: #FFFFFF;
+  --sidebar-primary: #24a684;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: rgba(255, 255, 255, 0.1);
+  --sidebar-accent-foreground: #FFFFFF;
+  --sidebar-border: #1e1f27;
+  --sidebar-ring: #FFFFFF;
+}
+
+@theme inline {
+  --font-sans: "Geist", "Geist Fallback";
+  --font-mono: "Geist Mono", "Geist Mono Fallback";
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  /* Updated custom color tokens */
+  --color-wai-teal: var(--wai-teal);
+  --color-wai-mint: var(--wai-mint);
+  --color-wai-slate: var(--wai-slate);
+  --color-wai-success: var(--wai-success);
+  --color-wai-warning: var(--wai-warning);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  /* Custom Sidebar Scrollbar */
+  .sidebar-scroll::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .sidebar-scroll::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .sidebar-scroll::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+  }
+
+  .sidebar-scroll::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+  }
+}
