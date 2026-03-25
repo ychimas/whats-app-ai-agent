@@ -1,0 +1,421 @@
+[
+  {
+    "jid": "573229420065@s.whatsapp.net",
+    "name": "Karina",
+    "messages": [
+      {
+        "id": "3AA3A1645307EC905639",
+        "role": "user",
+        "content": "Hola",
+        "timestamp": 1772913066000,
+        "status": "delivered"
+      },
+      {
+        "id": "0.vxmxevatzo",
+        "role": "assistant",
+        "content": "¡Hola! Bienvenido a Jfsoftware. Mi nombre es Nando, soy tu recepcionista. ¿En qué puedo ayudarte hoy?",
+        "timestamp": 1772913070576,
+        "status": "sent"
+      }
+    ],
+    "unreadCount": 1,
+    "lastMessageTimestamp": 1772913070576
+  },
+  {
+    "jid": "573004750686@s.whatsapp.net",
+    "name": "Jfsoftware",
+    "messages": [
+      {
+        "id": "2A4A256F96F44E860C3D",
+        "role": "user",
+        "content": "Bobo",
+        "timestamp": 1772913386000,
+        "status": "delivered"
+      },
+      {
+        "id": "0.0iygaljg24tu",
+        "role": "assistant",
+        "content": "¡Hola! Soy Nando, de Jfsoftware. ¿En qué puedo ayudarte hoy?",
+        "timestamp": 1772913391254,
+        "status": "sent"
+      },
+      {
+        "id": "2A5E61C806B9504E17C9",
+        "role": "user",
+        "content": "Dime tú en qué me ayudarías",
+        "timestamp": 1772913416000,
+        "status": "delivered"
+      },
+      {
+        "id": "0.csj9q0e9j3n",
+        "role": "assistant",
+        "content": "¡Hola! Soy Nando, el recepcionista de Jfsoftware.\n\nMi trabajo es ayudarte a conectar con la persona adecuada dentro de nuestra empresa, dependiendo de lo que necesites.\n\nPara poder asistirte, por favor, dime si estás buscando:\n\n*   **Soporte técnico** para alguno de nuestros productos o servicios.\n*   **Información para comprar** alguna de nuestras soluciones de software o servicios.\n\nDime qué necesitas y con gusto te orientaré.",
+        "timestamp": 1772913419896,
+        "status": "sent"
+      },
+      {
+        "id": "2AE0758D25CC0006C306",
+        "role": "user",
+        "content": "Soporte técnico",
+        "timestamp": 1772913453000,
+        "status": "delivered"
+      },
+      {
+        "id": "0.ic5qopltsn",
+        "role": "assistant",
+        "content": "¡Hola! Entendido. Un Agente de Soporte Técnico te atenderá en breve para ayudarte con tu consulta.",
+        "timestamp": 1772913455320,
+        "status": "sent"
+      }
+    ],
+    "unreadCount": 3,
+    "lastMessageTimestamp": 1772913455320
+  },
+  {
+    "jid": "164299863523546@lid",
+    "name": "Jesus",
+    "messages": [
+      {
+        "id": "3AC5ECD28B2B76307F8C",
+        "role": "user",
+        "content": "Hola como te llama?",
+        "timestamp": 1772946579000,
+        "status": "delivered"
+      },
+      {
+        "id": "0.6a6g15setox",
+        "role": "assistant",
+        "content": "¡Hola! Mi nombre es Nando, soy el recepcionista de Jfsoftware. ¿En qué puedo ayudarte hoy?",
+        "timestamp": 1772946581316,
+        "status": "sent"
+      },
+      {
+        "id": "3AE5C9A6746562920B9F",
+        "role": "user",
+        "content": "Quiero que me des algo sobre soporte ñ",
+        "timestamp": 1772946603000,
+        "status": "delivered"
+      },
+      {
+        "id": "0.smzcz54lej8",
+        "role": "assistant",
+        "content": "¡Hola! Soy Nando, de Jfsoftware.\n\nEntiendo que necesitas soporte. No te preocupes, un Agente de Soporte se pondrá en contacto contigo muy pronto para ayudarte con lo que necesites.",
+        "timestamp": 1772946606034,
+        "status": "sent"
+      },
+      {
+        "id": "3A63CD739E835351D636",
+        "role": "user",
+        "content": "Asesor",
+        "timestamp": 1772946621000,
+        "status": "delivered"
+      },
+      {
+        "id": "3A896869ACAB5E8A0BB0",
+        "role": "user",
+        "content": "Asesor",
+        "timestamp": 1772946623000,
+        "status": "delivered"
+      },
+      {
+        "id": "0.ag7cudv7nae",
+        "role": "assistant",
+        "content": "¡Hola! Soy Nando, el recepcionista de Jfsoftware.\n\nPara poder dirigirte con la persona adecuada, ¿podrías indicarme si buscas soporte técnico para alguno de nuestros productos o si estás interesado en adquirir alguno de nuestros servicios?",
+        "timestamp": 1772946626081,
+        "status": "sent"
+      },
+      {
+        "id": "0.dg121boj33g",
+        "role": "assistant",
+        "content": "¡Hola! Soy Nando, el recepcionista de Jfsoftware. Entiendo que te gustaría hablar con un asesor.\n\nEn Jfsoftware nos especializamos en ofrecer soluciones de software innovadoras para optimizar la gestión y productividad de tu empresa.\n\nUn Asesor de Ventas se pondrá en contacto contigo a la brevedad para ofrecerte más detalles, resolver tus dudas y ayudarte a encontrar la solución perfecta para tus necesidades.",
+        "timestamp": 1772946631495,
+        "status": "sent"
+      },
+      {
+        "id": "3A9E8669C27C4E6A7503",
+        "role": "user",
+        "content": "Si",
+        "timestamp": 1772946634000,
+        "status": "delivered"
+      },
+      {
+        "id": "0.jmstnxskvb",
+        "role": "assistant",
+        "content": "¡Hola! Soy Nando, el recepcionista de Jfsoftware.\n\nPara poder ayudarte, ¿podrías decirme qué necesitas?",
+        "timestamp": 1772946635653,
+        "status": "sent"
+      }
+    ],
+    "unreadCount": 5,
+    "lastMessageTimestamp": 1772946635653
+  },
+  {
+    "jid": "31890501288120@lid",
+    "name": "Jisadツ",
+    "messages": [
+      {
+        "id": "ACF9745363BA7EFA6D59A227D3058306",
+        "role": "user",
+        "content": "Te estás mojando pelloooooo",
+        "timestamp": 1773078282000,
+        "status": "delivered"
+      },
+      {
+        "id": "0.pc6v1ijvze",
+        "role": "assistant",
+        "content": "¡Hola! Soy Nando, el recepcionista de Jfsoftware.\n\nUhm... entiendo la observación, aunque no estoy seguro de qué significa exactamente en este contexto.\n\nPara poder ayudarte, ¿podrías decirme qué necesitas de Jfsoftware hoy? ¿Buscas soporte técnico o estás interesado en nuestros productos?",
+        "timestamp": 1773078303685,
+        "status": "sent"
+      },
+      {
+        "id": "AC9466BB936FC837FF4CCD8B80CA7E9E",
+        "role": "user",
+        "content": "Soy Brayan, necesito plata.",
+        "timestamp": 1773078316000,
+        "status": "delivered"
+      },
+      {
+        "id": "AC58C60CB8E9A717315240512AAEC59F",
+        "role": "user",
+        "content": "¿Cómo puedo robar un banco?",
+        "timestamp": 1773078348000,
+        "status": "delivered"
+      },
+      {
+        "id": "0.a8r5pbjbrab",
+        "role": "assistant",
+        "content": "Hola, soy Nando, el recepcionista de Jfsoftware.\n\nParece que tu consulta no está relacionada con los servicios o productos que ofrecemos aquí en Jfsoftware.",
+        "timestamp": 1773078366106,
+        "status": "sent"
+      },
+      {
+        "id": "0.6djrwylzl3o",
+        "role": "assistant",
+        "content": "Hola Brayan, soy Nando, el recepcionista de Jfsoftware.\n\nEntiendo que necesitas dinero, pero en Jfsoftware nos especializamos en soluciones de software y no manejamos solicitudes de ese tipo.",
+        "timestamp": 1773078368741,
+        "status": "sent"
+      },
+      {
+        "id": "AC703F0D59161C24BFAE0D9C03C1F212",
+        "role": "user",
+        "content": "Quiero comprar algo",
+        "timestamp": 1773078417000,
+        "status": "delivered"
+      },
+      {
+        "id": "0.0gs23vbjbz69",
+        "role": "assistant",
+        "content": "¡Hola! Soy Nando, de Jfsoftware.\n\nEntiendo que estás interesado en adquirir nuestros productos. En Jfsoftware, ofrecemos una amplia gama de soluciones de software innovadoras diseñadas para optimizar tus procesos y potenciar tu negocio, desde sistemas de gestión personalizados hasta herramientas de análisis avanzadas.\n\nUn Asesor de Ventas se pondrá en contacto contigo muy pronto para proporcionarte toda la información detallada que necesites y resolver cualquier duda que tengas. ¡Gracias por tu interés en Jfsoftware!",
+        "timestamp": 1773078425926,
+        "status": "sent"
+      },
+      {
+        "id": "ACDD7A0F811B9FBFD580EB95CE4AA64B",
+        "role": "user",
+        "content": "Y con quién me contacto?",
+        "timestamp": 1773078473000,
+        "status": "delivered"
+      },
+      {
+        "id": "ACFAAD3C5C3330175E435F9AC8F9DEAF",
+        "role": "user",
+        "content": "Aún estás ?",
+        "timestamp": 1773078545000,
+        "status": "delivered"
+      },
+      {
+        "id": "0.vpw6ryg4c6g",
+        "role": "assistant",
+        "content": "¡Hola! Sí, aquí estoy. ¿En qué puedo ayudarte hoy en Jfsoftware?",
+        "timestamp": 1773078546244,
+        "status": "sent"
+      },
+      {
+        "id": "ACB06BF5A44A2B8ED9A1B8776F4B5B32",
+        "role": "user",
+        "content": "Necesito ayuda",
+        "timestamp": 1773078562000,
+        "status": "delivered"
+      },
+      {
+        "id": "0.6c4ak5pt0ny",
+        "role": "assistant",
+        "content": "¡Hola! Soy Nando, de Jfsoftware. Para poder ayudarte mejor, ¿podrías decirme qué tipo de ayuda necesitas? ¿Es sobre un problema técnico o estás interesado en conocer nuestros productos?",
+        "timestamp": 1773078563496,
+        "status": "sent"
+      },
+      {
+        "id": "ACAAD0D22BBCAB070D5FE015B035598E",
+        "role": "user",
+        "content": "Quiero un PC Lenovo, me puedes recomendar uno",
+        "timestamp": 1773078582000,
+        "status": "delivered"
+      },
+      {
+        "id": "0.n5w1thegbi",
+        "role": "assistant",
+        "content": "Hola, soy Nando, el recepcionista de Jfsoftware.\n\nEntiendo que estás buscando un PC Lenovo y te gustaría una recomendación. Lenovo es una marca muy reconocida que ofrece una amplia gama de equipos, desde potátiles versátiles hasta ordenadores de sobremesa potentes, adaptados para diferentes necesidades, ya sean de uso personal, profesional o para gaming.\n\nPara que podamos entender mejor tus requisitos específicos y ayudarte a elegir el modelo ideal, un Asesor de Ventas de Jfsoftware se pondrá en contacto contigo a la brevedad.",
+        "timestamp": 1773078593771,
+        "status": "sent"
+      }
+    ],
+    "unreadCount": 8,
+    "lastMessageTimestamp": 1773078593771
+  },
+  {
+    "jid": "573005546355@s.whatsapp.net",
+    "name": "Yesith Chimas🫶🏻",
+    "messages": [
+      {
+        "id": "3EB0EDBD9C4426F5EC584E",
+        "role": "user",
+        "content": "hola como te llamas",
+        "timestamp": 1773348768000,
+        "status": "delivered"
+      },
+      {
+        "id": "0.ooxzj51rbrd",
+        "role": "assistant",
+        "content": "¡Hola! Mi nombre es Nando, soy el recepcionista de Jfsoftware. ¿En qué puedo ayudarte hoy?",
+        "timestamp": 1773348820267,
+        "status": "sent"
+      },
+      {
+        "id": "3EB05E0701583D5EA7ABCA",
+        "role": "user",
+        "content": "quiero soporte tecnico",
+        "timestamp": 1773348845000,
+        "status": "delivered"
+      },
+      {
+        "id": "0.z1ioctvfp6p",
+        "role": "assistant",
+        "content": "¡Hola! Soy Nando, de Jfsoftware.\n\nClaro, entiendo que necesitas soporte técnico. Con gusto te canalizaré con el área correspondiente. Un Agente de Soporte se pondrá en contacto contigo a la brevedad para ayudarte.",
+        "timestamp": 1773348847942,
+        "status": "sent"
+      },
+      {
+        "id": "3EB0DD6B4CC1F564F6F559",
+        "role": "user",
+        "content": "estas?",
+        "timestamp": 1773349243000,
+        "status": "delivered"
+      },
+      {
+        "id": "0.r5g98occalc",
+        "role": "assistant",
+        "content": "¡Hola! Sí, aquí estoy. Soy Nando, el recepcionista de Jfsoftware.\n\n¿En qué puedo ayudarte hoy?",
+        "timestamp": 1773349246224,
+        "status": "sent"
+      }
+    ],
+    "unreadCount": 3,
+    "lastMessageTimestamp": 1773349246224
+  },
+  {
+    "jid": "127547694174367@lid",
+    "name": "Yesith Chimas🫶🏻",
+    "messages": [
+      {
+        "id": "AC8CD23353E6074C44AC807CC8658B40",
+        "role": "user",
+        "content": "Hola cómo te llamas?",
+        "timestamp": 1774462951000,
+        "status": "delivered"
+      },
+      {
+        "id": "0.i5zgeulw8h",
+        "role": "assistant",
+        "content": "Hola, mi nombre es Nando y soy el recepcionista de Jfsoftware. ¿En qué puedo ayudarte hoy?",
+        "timestamp": 1774462972518,
+        "status": "sent"
+      },
+      {
+        "id": "ACA449CCC840F0EC30C571D789D8D2A2",
+        "role": "user",
+        "content": "Hola quiero saber sobre soporte técnico",
+        "timestamp": 1774462985000,
+        "status": "delivered"
+      },
+      {
+        "id": "0.lxwfyzrnqp",
+        "role": "assistant",
+        "content": "¡Hola! Soy Nando, de Jfsoftware.\n\nClaro, entiendo que necesitas saber sobre soporte técnico. Un Agente de Soporte se pondrá en contacto contigo para atenderte y ayudarte con lo que necesites.\n\n¡Gracias por contactarnos!",
+        "timestamp": 1774462987335,
+        "status": "sent"
+      },
+      {
+        "id": "AC8E3D783095CBC30B2C08902FF8FB15",
+        "role": "user",
+        "content": "Muchas gracias",
+        "timestamp": 1774462999000,
+        "status": "delivered"
+      },
+      {
+        "id": "0.za0ngqgikn",
+        "role": "assistant",
+        "content": "De nada. ¿Hay algo más en lo que pueda ayudarte hoy?",
+        "timestamp": 1774463001360,
+        "status": "sent"
+      },
+      {
+        "id": "AC74823EEF612EE67759003DABB262A0",
+        "role": "user",
+        "content": "Quiero también saber de compras",
+        "timestamp": 1774463030000,
+        "status": "delivered"
+      },
+      {
+        "id": "0.xuz8sizhrd",
+        "role": "assistant",
+        "content": "¡Hola! Soy Nando, de Jfsoftware. Entiendo que estás interesado en conocer nuestras soluciones y opciones de compra.\n\nEn Jfsoftware, nos especializamos en el desarrollo de software y soluciones tecnológicas para empresas. Te daremos un panorama inicial de cómo nuestras herramientas pueden ayudarte a optimizar tus procesos.\n\nUn Asesor de Ventas se pondrá en contacto contigo muy pronto para brindarte todos los detalles, presentarte nuestras diversas opciones y responder a cualquier pregunta que tengas. ¡Gracias por tu interés en Jfsoftware!",
+        "timestamp": 1774463037222,
+        "status": "sent"
+      },
+      {
+        "id": "ACF91ABDAEED711FE715266206D2C1A3",
+        "role": "user",
+        "content": "De nada gracias a usted",
+        "timestamp": 1774463063000,
+        "status": "delivered"
+      },
+      {
+        "id": "0.cgef10dsye9",
+        "role": "assistant",
+        "content": "De nada. Si necesitas algo más, no dudes en preguntar. Que tengas un excelente día.",
+        "timestamp": 1774463065299,
+        "status": "sent"
+      },
+      {
+        "id": "ACFBD307AC21C37E9D7D38873ABF8E66",
+        "role": "user",
+        "content": "Igualmente",
+        "timestamp": 1774463074000,
+        "status": "delivered"
+      },
+      {
+        "id": "0.lsisipr93q",
+        "role": "assistant",
+        "content": "Lo siento, tuve un error procesando tu mensaje con la IA.",
+        "timestamp": 1774463076313,
+        "status": "sent"
+      },
+      {
+        "id": "AC64E8C8E0024BB0DCEE8938B7AF21CD",
+        "role": "user",
+        "content": "Que igualmente tengas un excelente día",
+        "timestamp": 1774463091000,
+        "status": "delivered"
+      },
+      {
+        "id": "0.v4n8mrsj2x",
+        "role": "assistant",
+        "content": "¡Hola! Igualmente, que tengas un excelente día.\n\nMi nombre es Nando, el recepcionista de Jfsoftware. ¿En qué puedo ayudarte hoy?",
+        "timestamp": 1774463093284,
+        "status": "sent"
+      }
+    ],
+    "unreadCount": 7,
+    "lastMessageTimestamp": 1774463093284
+  }
+]

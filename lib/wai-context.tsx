@@ -66,6 +66,7 @@ import { updateAgentConfig } from "./whatsapp"
 function menuFromPathname(pathname: string): MenuItem | null {
   if (pathname === "/dashboard" || pathname.startsWith("/dashboard/")) return "dashboard"
   if (pathname === "/whatsapp" || pathname.startsWith("/whatsapp/")) return "whatsapp-config"
+  if (pathname === "/chat" || pathname.startsWith("/chat/")) return "chat-en-vivo"
   if (pathname === "/mensajes/inicial" || pathname.startsWith("/mensajes/inicial/")) return "mensaje-inicial"
   if (pathname === "/mensajes/predeterminados" || pathname.startsWith("/mensajes/predeterminados/"))
     return "mensajes-predeterminados"
@@ -87,6 +88,8 @@ export function WAIProvider({ children }: { children: ReactNode }) {
   const [sidebarOpen, setSidebarOpen] = useState(true)
   const [whatsappConfig, setWhatsappConfig] = useState<WhatsAppConfig>(defaultWhatsAppConfig)
   const [whatsappStatus, setWhatsappStatus] = useState<"disconnected" | "connecting" | "connected">("disconnected")
+  const [isLoaded, setIsLoaded] = useState(false)
+  const [isAgentInitialized, setIsAgentInitialized] = useState(false)
 
   useEffect(() => {
     const menu = menuFromPathname(pathname)
@@ -95,25 +98,73 @@ export function WAIProvider({ children }: { children: ReactNode }) {
     }
   }, [activeMenu, pathname])
 
+  // Restore selected agent from localStorage
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const saved = localStorage.getItem("wai_selected_agent")
+      if (saved) {
+        setCurrentAgent(parseInt(saved))
+      }
+      setIsAgentInitialized(true)
+    }
+  }, [])
+
+  // Persist selected agent to localStorage
+  useEffect(() => {
+    if (isAgentInitialized && typeof window !== 'undefined') {
+      localStorage.setItem("wai_selected_agent", currentAgent.toString())
+    }
+  }, [currentAgent, isAgentInitialized])
+
+  // Load initial config from backend
+  useEffect(() => {
+    async function loadConfig() {
+      try {
+        const res = await fetch('/api/agent/config')
+        if (res.ok) {
+          const config = await res.json()
+          setAgents(prev => prev.map(a => a.id === 1 ? {
+             ...a,
+             context: config.context || "",
+             apiKey: config.apiKey || "",
+             aiProvider: config.provider || "openai",
+             isActive: config.isActive ?? false
+          } : a))
+          // Only set loaded if successful
+          setIsLoaded(true)
+        } else {
+            console.error("Failed to load config, status:", res.status)
+        }
+      } catch (e) {
+        console.error("Failed to load initial config", e)
+      }
+    }
+    loadConfig()
+  }, [])
+
   // Sync with backend config whenever current agent changes
   useEffect(() => {
-    // Only sync if it's the Master Agent (ID 1)
-    if (currentAgent !== 1) return;
+    // Only sync if loaded and it's the Master Agent (ID 1)
+    if (!isLoaded || currentAgent !== 1) return;
 
     const agent = agents.find(a => a.id === currentAgent)
     if (agent) {
-      fetch('/api/agent/sync', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          context: agent.context,
-          apiKey: agent.apiKey,
-          provider: agent.aiProvider,
-          isActive: agent.isActive
-        })
-      }).catch(console.error)
+      const timer = setTimeout(() => {
+        fetch('/api/agent/sync', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            context: agent.context,
+            apiKey: agent.apiKey,
+            provider: agent.aiProvider,
+            isActive: agent.isActive
+          })
+        }).catch(console.error)
+      }, 1000) // Debounce 1s to avoid spamming the file system
+
+      return () => clearTimeout(timer)
     }
-  }, [currentAgent, agents])
+  }, [currentAgent, agents, isLoaded])
 
   const updateAgent = (id: number, data: Partial<Agent>) => {
     setAgents((prev) => prev.map((agent) => (agent.id === id ? { ...agent, ...data } : agent)))

@@ -11,31 +11,31 @@
   --card-foreground: #515150;
   --popover: #FFFFFF;
   --popover-foreground: #515150;
-  --primary: #008894;
+  --primary: #28c5f3;
   --primary-foreground: #FFFFFF;
-  --secondary: #F0FDFA;
-  --secondary-foreground: #008894;
+  --secondary: #F0F9FF;
+  --secondary-foreground: #28c5f3;
   --muted: #F3F4F6;
   --muted-foreground: #374151;
-  --accent: #25D366;
+  --accent: #28c5f3;
   --accent-foreground: #FFFFFF;
   --destructive: #EF4444;
   --destructive-foreground: #FFFFFF;
   --border: #E5E7EB;
   --input: #E5E7EB;
-  --ring: #008894;
+  --ring: #28c5f3;
   --radius: 0.625rem;
 
   /* Custom WAI colors - restored to WAI palette */
-  --wai-teal: #008894;
-  --wai-mint: #25D366;
+  --wai-teal: #28c5f3;
+  --wai-mint: #28c5f3;
   --wai-slate: #515150;
   --wai-success: #22C55E;
   --wai-warning: #F59E0B;
 
   --sidebar: #162630;
   --sidebar-foreground: #FFFFFF;
-  --sidebar-primary: #24a684;
+  --sidebar-primary: #28c5f3;
   --sidebar-primary-foreground: #FFFFFF;
   --sidebar-accent: rgba(255, 255, 255, 0.1);
   --sidebar-accent-foreground: #FFFFFF;
@@ -50,30 +50,30 @@
   --card-foreground: #FAFAFA;
   --popover: #1e1f27;
   --popover-foreground: #FAFAFA;
-  --primary: #008894;
+  --primary: #28c5f3;
   --primary-foreground: #FFFFFF;
-  --secondary: #27272a;
+  --secondary: #1e293b;
   --secondary-foreground: #FAFAFA;
   --muted: #27272a;
   --muted-foreground: #6b7280;
-  --accent: #25D366;
+  --accent: #28c5f3;
   --accent-foreground: #FFFFFF;
   --destructive: #7f1d1d;
   --destructive-foreground: #FAFAFA;
   --border: #27272a;
   --input: #27272a;
-  --ring: #008894;
+  --ring: #28c5f3;
 
   /* Custom WAI colors - dark mode */
-  --wai-teal: #008894;
-  --wai-mint: #25D366;
+  --wai-teal: #28c5f3;
+  --wai-mint: #28c5f3;
   --wai-slate: #FAFAFA;
   --wai-success: #22C55E;
   --wai-warning: #F59E0B;
 
   --sidebar: #1e1f27;
   --sidebar-foreground: #FFFFFF;
-  --sidebar-primary: #24a684;
+  --sidebar-primary: #28c5f3;
   --sidebar-primary-foreground: #FFFFFF;
   --sidebar-accent: rgba(255, 255, 255, 0.1);
   --sidebar-accent-foreground: #FFFFFF;

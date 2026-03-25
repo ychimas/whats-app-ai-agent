@@ -1,3 +1,19 @@
+export interface ChatMessage {
+    id: string
+    role: 'user' | 'assistant' | 'system'
+    content: string
+    timestamp: number
+    status?: 'sent' | 'delivered' | 'read'
+}
+
+export interface ChatSession {
+    jid: string
+    name?: string
+    messages: ChatMessage[]
+    unreadCount: number
+    lastMessageTimestamp: number
+}
+
 export interface Client {
   id: string
   name: string
@@ -48,6 +64,7 @@ export type AuthStep = "login" | "register" | "credentials" | "select-provider" 
 
 export type MenuItem =
   | "dashboard"
+  | "chat-en-vivo"
   | "mensaje-inicial"
   | "mensajes-predeterminados"
   | "reconocer-imagenes"

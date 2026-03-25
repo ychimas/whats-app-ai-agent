@@ -26,7 +26,10 @@ export function QRModal({ open, onOpenChange, onScanned }: QRModalProps) {
     setQrCode(null) // Reset QR code on open
 
     // Initial fetch to trigger connection
-    fetch(`/api/whatsapp/status?agentId=${currentAgent}`).catch(console.error)
+    fetch(`/api/whatsapp/status?agentId=${currentAgent}`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' }
+    }).catch(console.error)
 
     const interval = setInterval(async () => {
       try {
@@ -36,9 +39,16 @@ export function QRModal({ open, onOpenChange, onScanned }: QRModalProps) {
         if (data.qrCode) {
             setQrCode(data.qrCode)
             setLoading(false)
+        } else if (data.isConnected) {
+            setLoading(false)
+            onScanned()
+        } else if (data.isInitializing) {
+            setLoading(true)
         }
         
-        if (data.isConnected) {
+        if (data.isConnected && !loading) {
+             // Avoid multiple toasts
+        } else if (data.isConnected) {
             toast({
               title: "WhatsApp Conectado",
               description: `Agente ${currentAgent} vinculado exitosamente.`,

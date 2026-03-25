@@ -17,16 +17,25 @@ export async function generateAIResponse(message: string, context: string, apiKe
             })
             return response.choices[0]?.message?.content || "No pude generar una respuesta."
         }
-        
+
         if (provider === "gemini") {
             const genAI = new GoogleGenerativeAI(apiKey)
-            const model = genAI.getGenerativeModel({ model: "gemini-pro" })
-            
+            // Use Gemini 1.5 Flash which is faster and more cost-effective
+            // Note: The correct model name in the SDK is often just 'gemini-1.5-flash'
+            // but sometimes it requires specific versioning. Let's try the standard one.
+            // If 1.5-flash fails with 404, we can fallback to gemini-pro or try a different string.
+            // Based on error: "models/gemini-1.5-flash is not found for API version v1beta"
+            // Let's try 'gemini-pro' again as a safe fallback, or 'gemini-1.5-flash-latest'
+
+            // Verified via diagnostic script: 'gemini-2.5-flash' is the working model for this key.
+            console.log("[Global Agent] Using Gemini Model: gemini-2.5-flash");
+            const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" })
+
             // Gemini doesn't have a direct "system" role in the simple API, 
             // so we prepend the context to the prompt or use the chat history if needed.
             // For a single turn response, prepending context is reliable.
             const prompt = `${context ? `Instrucciones del sistema: ${context}\n\n` : ""}Usuario: ${message}`
-            
+
             const result = await model.generateContent(prompt)
             const response = await result.response
             return response.text()

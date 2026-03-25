@@ -28,6 +28,7 @@ import type { MenuItem } from "@/lib/types"
 const menuRoutes: Record<MenuItem, string> = {
   dashboard: "/dashboard",
   "whatsapp-config": "/whatsapp",
+  "chat-en-vivo": "/chat",
   "mensaje-inicial": "/mensajes/inicial",
   "mensajes-predeterminados": "/mensajes/predeterminados",
   "reconocer-imagenes": "/imagenes/reconocer",
@@ -40,6 +41,7 @@ const menuRoutes: Record<MenuItem, string> = {
 const menuItems: { id: MenuItem; label: string; icon: React.ReactNode; sublabel?: string }[] = [
   { id: "dashboard", label: "Funciones Principales", icon: <Home className="w-5 h-5" /> },
   { id: "whatsapp-config", label: "Configurar WhatsApp", icon: <MessageSquare className="w-5 h-5" /> },
+  { id: "chat-en-vivo", label: "Chat en Vivo", icon: <MessageSquare className="w-5 h-5" /> },
   { id: "mensaje-inicial", label: "Mensaje Inicial", icon: <MessageSquare className="w-5 h-5" /> },
   { id: "mensajes-predeterminados", label: "Mensajes Predeterminados", icon: <FileText className="w-5 h-5" /> },
   { id: "reconocer-imagenes", label: "Reconocer imágenes", icon: <ImageIcon className="w-5 h-5" /> },

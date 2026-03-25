@@ -33,13 +33,28 @@ export function MainDashboard() {
             setLogs(data.logs)
           }
         }
+
+        // Also fetch status to keep UI in sync
+        const statusRes = await fetch('/api/whatsapp/status')
+        if (statusRes.ok) {
+          const statusData = await statusRes.json()
+          if (statusData.isConnected) {
+            setWhatsappStatus("connected")
+            updateAgent(1, { whatsappConnected: true })
+          } else if (statusData.isInitializing) {
+            setWhatsappStatus("connecting")
+          } else {
+            setWhatsappStatus("disconnected")
+            updateAgent(1, { whatsappConnected: false })
+          }
+        }
       } catch (e) {
-        console.error("Failed to fetch logs", e)
+        console.error("Failed to fetch logs or status", e)
       }
     }
 
     fetchLogs() // Initial fetch
-    const interval = setInterval(fetchLogs, 2000) // Poll every 2s
+    const interval = setInterval(fetchLogs, 5000) // Poll every 5s (Reduced from 2s to reduce console noise)
     return () => clearInterval(interval)
   }, [])
 
@@ -50,18 +65,13 @@ export function MainDashboard() {
   useEffect(() => {
     // Check if user has already selected an agent
     const savedAgent = localStorage.getItem("wai_selected_agent")
-    if (savedAgent) {
-      // If saved, ensure we are using that agent
-      const agentId = parseInt(savedAgent)
-      if (agentId !== currentAgent) {
-        setCurrentAgent(agentId)
-      }
-    } else {
+    if (!savedAgent) {
       // DEFAULT TO AGENT 1 (ADMIN) on first load if nothing is saved
-      // But still show the modal to let them confirm or switch
+      // Show the modal to let them confirm or switch
       setCurrentAgent(1)
       setShowAgentSelection(true)
     }
+    // If savedAgent exists, the Context (WAIProvider) handles restoration.
   }, []) // Run only once on mount
 
   const providerLabel = {
@@ -211,36 +221,14 @@ export function MainDashboard() {
         )}
       </div>
 
-      {/* Real-time Logs */}
+      {/* Real-time Logs - REMOVED PER USER REQUEST, ONLY SHOWING STATIC MESSAGE */}
       <div className="bg-secondary border border-border text-foreground rounded-2xl p-4 max-h-48 overflow-y-auto font-mono text-sm space-y-1 relative">
-        {logs.length === 0 ? (
-          <div className="flex items-start gap-3">
-             <input type="checkbox" className="mt-1 w-4 h-4 accent-primary" defaultChecked readOnly />
-             <p className="text-sm text-muted-foreground">
-               Haz clic en "Iniciar WhatsApp" para activar el agente (recuerda haber ajustado el contexto si es necesario).
-             </p>
-          </div>
-        ) : (
-          logs.slice().reverse().map((log) => (
-            <div key={log.id} className="flex gap-2 items-start">
-              <span className="text-muted-foreground text-xs opacity-50 shrink-0 mt-0.5" suppressHydrationWarning>
-                {new Date(log.timestamp).toLocaleTimeString()}
-              </span>
-              <span className={
-                log.type === 'success' ? 'text-green-600 dark:text-green-400 font-medium' :
-                log.type === 'error' ? 'text-red-600 dark:text-red-400 font-medium' :
-                log.type === 'incoming' ? 'text-blue-600 dark:text-blue-400' :
-                log.type === 'outgoing' ? 'text-purple-600 dark:text-purple-400' :
-                'text-foreground'
-              }>
-                {log.type === 'incoming' && '📥 '}
-                {log.type === 'outgoing' && '🤖 '}
-                {log.message}
-              </span>
-            </div>
-          ))
-        )}
-        <div ref={logsEndRef} />
+        <div className="flex items-start gap-3">
+          <input type="checkbox" className="mt-1 w-4 h-4 accent-primary" defaultChecked readOnly />
+          <p className="text-sm text-muted-foreground">
+            Haz clic en "Iniciar WhatsApp" para activar el agente (recuerda haber ajustado el contexto si es necesario).
+          </p>
+        </div>
       </div>
 
       <AgentSelectionModal open={showAgentSelection} onOpenChange={setShowAgentSelection} />
